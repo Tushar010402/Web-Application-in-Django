@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+<div class="container-fluid px-0">
+
+  <img src="/static/img4.jpg" class="img-fluid" alt="..." mb='3'>
+</div>
+
+
+
+
+  <div class="container-sm my-3 align-center">
+  <h1 class="text-center"> Contact Us</h1>
+  <form method="post" action="/Contact">
+  {% csrf_token %}
+  <div class="form-group">
+    <div class="col my-3">
+      <label for="First_Name" class="form-label">First Name</label>
+      <input type="text" class="form-control" name="First_Name" placeholder="First name" aria-label="First name">
+    </div>
+    <div class="col my-3">
+      <label for="Last_Name" class="form-label">Last Name</label>
+      <input type="text" class="form-control"name="Last_Name"  placeholder="Last name" aria-label="Last name">
+    </div>
+    <div class="col my-3">
+      <label for="Phone" class="form-label">Phone No</label>
+      <input type="Phone" class="form-control"name="Phone"  placeholder="Phone No." aria-label="Phone No.">
+    </div>
+  <div class="mb-3 my-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" name="Email"  placeholder="name@example.com">
+  </div>
+
+  <div class="mb-3">
+    <label for="desc" class="form-label">Example textarea</label>
+    <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
+  </div>
+  <button class="btn btn-dark" type="submit">Submit</button>
+</form>
+</div>
+
+{% endblock body %}
